@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bikalpa Chaulagain - Personal Branding Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Bikalpa Chaulagain</h1>
+    <h3>Bachelor's in Mechanical Engineering, Kathmandu University</h3>
+  </div>
+
+  <div class="tabs">
+    <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
+    <button class="tablinks" onclick="openTab(event, 'projects')">Projects</button>
+    <button class="tablinks" onclick="openTab(event, 'about')">About Me</button>
+  </div>
+
+  <div id="home" class="tabcontent" style="display: block;">
+    <h2>Home</h2>
+    <p>Welcome to my personal website.<br>This website is in progress!!<br>I will be updating this website every saturday so hang on!!!!<br><br> My name is Bikalpa Chaulagain and I'm currently pursuing a Bachelor's degree in Mechanical Engineering at Kathmandu University. I'm passionate about solving complex problems and bringing innovative ideas to life.</p>
+  </div>
+
+  <div id="projects" class="tabcontent">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="#">Project 1</a></li>
+      <li><a href="#">Project 2</a></li>
+      <li><a href="#">Project 3</a></li>
+    </ul>
+  </div>
+
+  <div id="about" class="tabcontent">
+    <h2>About Me</h2>
+    <p>I'm a Mechanical Engineering student with a passion for innovation and problem-solving. I'm always looking for new challenges and opportunities to learn and grow. In my free time, I enjoy reading, hiking, and exploring new places.</p>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Open the Home tab by default
+    document.getElementsByClassName("tablinks")[0].click();
+  </script>
+
+</body>
+</html>
